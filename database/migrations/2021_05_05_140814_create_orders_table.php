@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->string("order_city");
             $table->enum("order_payment_method", ["cash_on_delivery", "orange_money"])->default("cash_on_delivery");
             $table->enum("order_payment_status", ["pending", "processing", "completed", "decline"])->default("pending");
-            $table->boolean("is_paid")->default(false);
+            $table->boolean("order_is_paid")->default(false);
             $table->timestamps();
         });
     }
