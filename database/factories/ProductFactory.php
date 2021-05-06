@@ -23,7 +23,7 @@ class ProductFactory extends Factory
     public function definition()
     {
         return [
-            'category_id' => function(){return Category::factory()->create()->id;},
+            // 'category_id' => function(){return Category::factory()->create()->id;},
             'prod_designation' => $this->faker->unique()->realText(20),
             'prod_description' => $this->faker->realText(100),
             'prod_price' => $this->faker->numberBetween(500, 1000000),
