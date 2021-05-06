@@ -23,7 +23,7 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => function(){return factory(User::class)->create()->id;},
+            'user_id' => function(){return User::factory()->create()->id;},
             'order_address' => $this->faker->address(),
             'order_region' => $this->faker->state(),
             'order_city' => $this->faker->city(),

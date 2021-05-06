@@ -36,7 +36,7 @@ class RoleSeeder extends Seeder
         $user2 = User::create([
             "role_id" => $role1->id,
             "name" => "admin",
-            "user_phone_number" => "75643226",
+            "user_phone_number" => "07299846",
             "email" => "admin@jmarket.com",
             "password" => Hash::make("12345678"),
         ]);
