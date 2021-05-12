@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Cette route permet d'afficher la page d'accueil
+Route::get('/', [WelcomeController::class, "index"])->name("welcome");
+
+// Cette route permet d'ajouter un produit au panier
+Route::get('/add-to-cart/{product}', [CartController::class, "add"])->name("cart.add");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
